@@ -1,0 +1,10 @@
+version: "3" #la version de docker 
+services: #services bech tektib fiyh kol chay ta3 l'image ou container ily bech ytsan3ou
+      node-app-img: #ism lprojet lkol
+        build:
+          context: .
+          args:
+            - MODE=developpment
+        volumes:
+          - /home/ali/Bureau/ESEN/docker-app:/app_JS #syncronisation bin local ou container
+        command: npm run devstart

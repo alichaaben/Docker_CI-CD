@@ -1,0 +1,13 @@
+version: "3" #la version de docker 
+services: #services bech tektib fiyh kol chay ta3 l'image ou container ily bech ytsan3ou
+      node-app-img: #ism lprojet lkol
+        image: nodejs #isim image ily bech nasna7a
+        container_name: cont-app-n
+        #build: . #bech ya3mil image 3an tari9 file hedhi
+        # volumes:
+        #   - /home/ali/Bureau/ESEN/docker-app:/app_JS #syncronisation bin local ou container
+
+        env_file:
+          - ./.env
+        ports:
+          - "5000:${PORT}" #port ily bech ye5dim minou container 

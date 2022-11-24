@@ -1,0 +1,46 @@
+1)sudo docker build -t app-node . ==> nasna3 image fi docker ismha my-image-nodeJs (l'point ily fi le5ir adhika no9sod .Dockerfile)
+2) sudo docker image ls ==> nchouf tous les image de docker
+
+3) sudo docker run --name my-container-nodeJs app-node ==> nasna3 container min image:app-node
+
+3)sudo docker run --name container-app -d -p 5000:4000 app-node ==> nasn3 container ema 3ala pc mte3ik (-d bech ye5dim ou ma yatla3ch fi teminal) 
+(-p port ta3 pc :port ily ma7tout fi container ==> -p 5000:4000)
+
+3) sudo docker ps -a ==> pour afficher tous les container de docker
+
+
+
+4)sudo docker stop bf29f8db152e ==> bech desactivi container docker
+
+5)sudo docker rm bf29f8db152e -f ==> bech tfasa5 container  ou (-f hiya force remove)
+5)sudo docker rmi feb5d9fea6a5 -f ==> bech nfasa5 image docker
+
+
+
+6)sudo docker exec -it container-app bash ==> bech najim n7il container ou nchouf chniya fi wistiha (-it ou bash ==>ma3neha n7ilou fi wist terminal)
+
+7) Dockerignore ==> lezmik tasn3ou ou t7ot fiyh les dossier ou les ficher il ma 7achtikch biyhom bech yt7atou fi container 
+
+
+///*****HOTREALOD: BECH TNAJIM TA3MIL SYNCRONISE BIN LOCALHOST OU CONTAINER TA3 DOCKER :
+
+8)sudo docker run --name cont-app -v /home/ali/Bureau/docker-app:/app_JS (:ro) -d -p 5000:4000 app-node ==> -v ta3mil syncronisation bin localhost ou docker container ou ay 7aja tbadilha fi local titbadil fi container ou la3kis s7i7 (2 we bunding)
+
+9) ken t7ib ma3ach tsir modif fi local wa9tit tmis container 7ot Read-only==>(:ro)ou na7i parenthese
+
+10)sudo docker logs cont-app ==> tchouf server te3ik fi terminal kifech excucuter
+
+
+///*****DOCKER COMPOSE:3ibara i5tisarat ili docker bech ma3ch niktib barch donc nwali ne5dimha fi (docker-compose.yml) ou lansi les commande ta3 docker-compose
+
+11) sudo docker-compose up -d  ==> bech nasna3 container ou n5adimha 
+12)sudo docker-compose down ==> bech ndesactivi container
+
+
+13)sudo docker-compose -f docker-compose.dev up -d ==>kol environnement nasla3lou docker-compose.yml 5as biyh ou n3ayetlou haka 
+
+14)sudo docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d ==> hedhik ken fama 7ajet mochtarka fiyhom ena ktibtihom fi docker-compose ou na7itihom mil o5rin 5alit ken ily mouch kif kif (kif tzidiha --build fi le5ir 3ibara realod lil image bech tsajil modification jdod )
+
+///*****MILTISTAGE:
+15)n9asim l'image ldes container ye5dmou mab3adhihom 
+
